@@ -1,10 +1,11 @@
-const mongoose = require('mongoose')
+ const { default: mongoose } = require('mongoose')
+const mogoose = require('mongoose')
 
+ mongoose.connect(process.env.DATABASE,{
+     useNewUrlParser:true,
+     useUnifiedTopology:true
 
-mongoose.connect(process.env.DATABASE,{
-    newNewUrlParser:true,
-    useUnifiedTopplogy:true
-})
+ })
 
-.then(() => console.log("Databse connected sucessfully"))
-.catch((error) => console.log(error)) 
+ .then (() => console.log("Database connected sucessfully"))
+ .catch((error)=>console.log(error))
